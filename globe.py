@@ -56,7 +56,7 @@ class Player4D(object):
         self._step_front(self.pace_theta)
 
     def move_back(self):
-        self._step_front(-self .pace_theta)
+        self._step_front(-self.pace_theta)
 
     def turn_left(self):
         self._step_direction(-self.pose_theta, "right")
@@ -153,24 +153,5 @@ if __name__ == '__main__':
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
         main_canvas[:] = canvas
 
-    G = Globe4D()
-    player = Player4D(G, update)
 
-    cv2.namedWindow("globe")
-    ch = None
-    while ch != ord('q'):
-        cv2.imshow("globe", main_canvas)
-        ch = cv2.waitKey(1)
-        if ch == ord('i'):
-            player.move_front()
-        elif ch == ord('k'):
-            player.move_back()
-        elif ch == ord('w'):
-            player.turn_up()
-        elif ch == ord('a'):
-            player.turn_left()
-        elif ch == ord('s'):
-            player.turn_down()
-        elif ch == ord('d'):
-            player.turn_right()
 
