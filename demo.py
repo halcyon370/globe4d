@@ -27,8 +27,8 @@ class MyCube(Mesh4D):
             (-0.5, 0.5, 0.5),
             (-0.5, -0.5, 0.5),
         ]) * size
-        cube_vertices[:, 2] += 6.0
-        cube_vertices[:, 0] -= 2.0
+        # cube_vertices[:, 2] += 6.0
+        # cube_vertices[:, 0] -= 2.0
         self.vertices3d = cube_vertices
         self.surfaces = (
             (3,2,1,0),
